@@ -68,6 +68,17 @@ var orm = {
             if (err) throw err;
             callback(result)
         });
+    },
+
+    delete: function(table, condition, callback){
+        var stringToQuery = "DELETE FROM " + table;
+        stringToQuery += " WHERE ";
+        stringToQuery += condition;
+
+        connection.query(stringToQuery, function(err, result){
+            if (err) throw err;
+            callback(result);
+        })
     }
 
 }

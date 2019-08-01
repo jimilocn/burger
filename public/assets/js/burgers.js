@@ -17,7 +17,7 @@ $(function () {
             }
         );
     });
-    
+
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
@@ -27,15 +27,29 @@ $(function () {
             // eaten: $("[name=eaten]:checked").val().trim()
         }
 
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("New burger was added");
-                location.reload();
-            }
-        )
+        if ($("#burger").val().trim() != 0) {
+
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                function () {
+                    console.log("New burger was added");
+                    location.reload();
+                }
+            )
+        } 
+    })
+
+    $(".delete-burger").on("click", function (event) {
+        var id = $(this).data("id");
+
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(function () {
+            console.log("deleted burger")
+            location.reload();
+        })
     })
 
 })

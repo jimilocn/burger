@@ -1,20 +1,21 @@
-<div class="container center">
-    <div class="row">
+<div class="container">
+    <div class="row center">
         <h1>Yum Yum Burgers</h1>
-        <h5>A site for the world traveling hamburger consumer. Collect them all and keep track along the way!</h5>
+        <h6>A site for the world traveling hamburger consumer. Collect them all and keep track along the way!</h6>
     </div>
 
-    <div class="row">
+<hr>
+    <div class="row center">
         <h3>List of burgers</h3>
     </div>
 
 
-    <div class="row">
+    <div class="row middle">
 
 
-        <div class="col s12 m6">
-            <h5>List of burgers to eat</h5>
-            <ul>
+        <div class="col s12 m5">
+            <h5 class = "right-align">List of burgers to eat</h5>
+            <ul class = "right-align">
                 {{#each burgers}}
                 {{#unless eaten}}
                 {{> burgers/burger-block eaten=true}}
@@ -24,9 +25,9 @@
             </ul>
 
         </div>
-        <div class="col s12 m6">
-            <h5>List of burgers already eaten</h5>
-            <ul>
+        <div class="col s12 m5">
+            <h5 class = "right-align">List of burgers already eaten</h5>
+            <ul class = "right-align">
                 {{#each burgers}}
                 {{#if eaten}}
                 {{> burgers/burger-block eaten=false}}
@@ -46,17 +47,20 @@
     </div>
 
 
-    <div class="row">
+    <div class="row center">
         <div class="col s3"></div>
         <div class="col s6">
             <form class="create-form">
 
                 <div class="form-group">
-                    <label for="burg">Burger Name:</label>
+                    <label for="burg"><h5>Burger Name:</h5></label>
                     <input type="text" id="burger" name="name">
                 </div>
 
-                <button type="submit">Add Burger</button>
+           
+  <button class="btn-small waves-effect waves-light" type="submit" name="action">Add Burger
+    <i class="material-icons right">send</i>
+  </button>
             </form>
 
         </div>

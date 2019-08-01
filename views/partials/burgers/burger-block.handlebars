@@ -1,9 +1,16 @@
 <li>
     {{name}}
 
-    <button class="change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
-        {{#if eaten}}NOMNOM!{{else}}GET ANOTHER{{/if}}
-    </button>
 
+    <a class="waves-effect waves-light btn-small change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
+        {{#if eaten}}DEVOUR <i class="material-icons">local_dining</i>{{else}}GET MORE <i
+            class="material-icons">add_circle_outline</i>
+        {{/if}}
+    </a>
 
-</li>   
+<a class="waves-effect waves-light btn-small delete-burger" data-id="{{this.id}}">
+      <i class="material-icons">delete_forever</i>
+       
+    </a>
+
+</li>
