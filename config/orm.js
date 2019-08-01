@@ -57,7 +57,7 @@ var orm = {
     update: function (table, objectColumnValues, condition, callback) {
         var stringToQuery = "UPDATE " + table;
 
-        stringToQuery += "SET ";
+        stringToQuery += " SET ";
         stringToQuery += objectConvertToSql(objectColumnValues);
         stringToQuery += " WHERE ";
         stringToQuery += condition;

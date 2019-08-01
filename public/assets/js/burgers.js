@@ -7,7 +7,7 @@ $(function () {
             eaten: newEaten
         };
 
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newEatenStatus
         }).then(
@@ -17,12 +17,14 @@ $(function () {
             }
         );
     });
+    
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#burg").val().trim(),
-            eaten: $("[name=eaten]:checked").val().trim()
+            name: $("#burger").val().trim(),
+            eaten: 0
+            // eaten: $("[name=eaten]:checked").val().trim()
         }
 
         $.ajax("/api/burgers", {
