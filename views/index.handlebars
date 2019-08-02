@@ -1,21 +1,21 @@
 <div class="container">
     <div class="row center">
-        <h1>Yum Yum Burgers</h1>
-        <h6>A site for the world traveling hamburger consumer. Collect them all and keep track along the way!</h6>
+        <h1 class="buns">Yum Yum Burgers</h1>
+        <h6 class="lettuce">A site for the world traveling hamburger connoisseur. Collect them all and keep track along
+            the way!</h6>
     </div>
 
-<hr>
     <div class="row center">
-        <h3>List of burgers</h3>
+        <h3 class="ketchup white-text">List of Burgers</h3>
     </div>
 
 
-    <div class="row middle">
+    <div class="row middle white-text">
 
 
         <div class="col s12 m5">
-            <h5 class = "right-align">List of burgers to eat</h5>
-            <ul class = "right-align">
+            <h5 class="right-align">List of burgers to eat</h5>
+            <ul class="right-align">
                 {{#each burgers}}
                 {{#unless eaten}}
                 {{> burgers/burger-block eaten=true}}
@@ -25,9 +25,11 @@
             </ul>
 
         </div>
+
+
         <div class="col s12 m5">
-            <h5 class = "right-align">List of burgers already eaten</h5>
-            <ul class = "right-align">
+            <h5 class="right-align">List of burgers already eaten</h5>
+            <ul class="right-align">
                 {{#each burgers}}
                 {{#if eaten}}
                 {{> burgers/burger-block eaten=false}}
@@ -41,7 +43,7 @@
 
     <div class="row">
         <div class="col s12 center">
-            <h3>Add a New Burger!</h3>
+            <h3 class="buns">Add a New Burger!</h3>
         </div>
 
     </div>
@@ -53,18 +55,35 @@
             <form class="create-form">
 
                 <div class="form-group">
-                    <label for="burg"><h5>Burger Name:</h5></label>
-                    <input type="text" id="burger" name="name">
+                    <label for="burg">
+                        <h5>Burger Name (required):</h5>
+                    </label>
+                    <input class="white-text center-align" type="text" id="burger" name="name">
                 </div>
 
-           
-  <button class="btn-small waves-effect waves-light" type="submit" name="action">Add Burger
-    <i class="material-icons right">send</i>
-  </button>
+
+                <button class="btn-small waves-effect waves-light amber darken-1 black-text modal-trigger" href="#modal1"
+                    type="submit" name="action">Add Burger
+                    <i class="material-icons right">send</i>
+                </button>
             </form>
 
         </div>
         <div class="col s3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+            <div id="modal1" class="modal">
+                <div class="modal-content center-align amber darken-1 amber">
+                    <h4>HAMBURGER ADDED</h4>
+                    <p>Let's go eat them all!</p>
+                </div>
+                <div class="modal-footer light-green darken-4">
+                    <a href="/" class="modal-close waves-effect waves-green btn-flat white-text">close</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 

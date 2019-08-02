@@ -13,13 +13,25 @@ body{
     background: rgb(224, 125, 224);
 }
 
-h1,h3{
-    background: rgba(224, 186, 224, 0.507);
+
+.buns{
+    background: #ffd901;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.lettuce{
+    background: #33691e;
+    padding: 15px;
+    border-radius: 10px;
+    color:white;
     font-weight: bolder;
 }
-h6{
-    background: rgba(255, 255, 0, 0.76);
-    padding: 15px;
+
+.ketchup{
+    background:#e53935;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 h5{
@@ -29,7 +41,8 @@ h5{
 }
 
 .middle{
-    background: rgba(224, 186, 224, 0.877);
+    background: #793424ce;
+    border-radius: 10px;
 }
 
 ul{

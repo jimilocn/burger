@@ -2,13 +2,13 @@
     {{name}}
 
 
-    <a class="waves-effect waves-light btn-small change-eaten" data-id="{{id}}" data-neweaten="{{eaten}}">
+    <a class="waves-effect waves-light btn-small change-eaten light-green darken-4" data-id="{{id}}" data-neweaten="{{eaten}}">
         {{#if eaten}}DEVOUR <i class="material-icons">local_dining</i>{{else}}GET MORE <i
             class="material-icons">add_circle_outline</i>
         {{/if}}
     </a>
 
-<a class="waves-effect waves-light btn-small delete-burger" data-id="{{this.id}}">
+<a class="waves-effect waves-light btn-small delete-burger red darken-1" data-id="{{this.id}}">
       <i class="material-icons">delete_forever</i>
        
     </a>

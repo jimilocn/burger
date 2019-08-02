@@ -29,16 +29,24 @@ $(function () {
 
         if ($("#burger").val().trim() != 0) {
 
+
+
             $.ajax("/api/burgers", {
                 type: "POST",
                 data: newBurger
             }).then(
                 function () {
                     console.log("New burger was added");
-                    location.reload();
+
+                    // location.reload();
                 }
             )
-        } 
+
+
+            $('.modal').modal();
+            $('#modal1').modal('open');
+
+        }
     })
 
     $(".delete-burger").on("click", function (event) {
@@ -51,5 +59,6 @@ $(function () {
             location.reload();
         })
     })
+
 
 })
