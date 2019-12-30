@@ -1,5 +1,8 @@
-# burger
+# Burger Wish List
+# <img src="/burger.PNG"/>
 
+Live link -  https://jimi-burger-live1.herokuapp.com/
+repo - https://github.com/jimilocn/burger
 This program was created in the Northwestern University Coding Bootcamp 2019. It an application that guides the user to complete or edit a checklist of burgers that the have had or want to have in the future. This program challenges the coder to utilize the express, express handlebars, MySQL/JAWSDB, orm, and Node applications to create a website that draws from a database and intertwine it with a client's requests. The coder was also challenged to further practice full stack developing. 
 
 
